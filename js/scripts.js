@@ -6,3 +6,9 @@ jQuery(document).ready(function($){
   jQuery('.thumbnail a').tooltip({placement: 'bottom'});
   jQuery('.thumbnail img').tooltip({placement: 'bottom'});
 });
+
+// Prevent user to use right click
+document.addEventListener('contextmenu', function (event){
+  event.preventDefault();
+  return false;
+}, false);
