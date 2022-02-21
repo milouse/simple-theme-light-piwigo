@@ -6,9 +6,9 @@
     ({$debug.NB_QUERIES} {'SQL queries in'|@translate} {$debug.SQL_TIME}) -
     {/if}
     {'Powered by'|@translate} <a href="{$PHPWG_URL}">Piwigo</a>
-     - <a href="{$themeconf.url}">{$themeconf.name} theme</a>
+    - <a href="{$themeconf.url}">{$themeconf.name} theme</a>
     {if isset($CONTACT_MAIL)}
-    <a href="mailto:{$CONTACT_MAIL}?subject={'A comment on your site'|@translate|@escape:url}">{'Webmaster'|@translate}</a>
+    - <a href="mailto:{$CONTACT_MAIL}?subject={'A comment on your site'|@translate|@escape:url}">{'Contact webmaster'|@translate}</a>
     {/if}
 
     {if isset($TOGGLE_MOBILE_THEME_URL)}
