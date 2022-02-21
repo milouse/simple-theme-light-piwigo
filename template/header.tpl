@@ -31,8 +31,8 @@
   {if isset($U_UP)}<link rel="up" title="{'Thumbnails'|@translate}" href="{$U_UP}">{/if}
 
   <link rel="stylesheet" type="text/css" href="themes/{$themeconf.id}/css/open-sans/open-sans.css"> {* cannot be loaded by combine_css because it contains relative urls *}
-  {combine_css path="themes/simpleng/css/style.min.css" order="1"}
-  {combine_css path="themes/simpleng/css/bootstrap-responsive.min.css" order="2"}
+  {combine_css path="themes/{$themeconf.theme_dir}/css/style.min.css" order="1"}
+  {combine_css path="themes/{$themeconf.theme_dir}/css/bootstrap-responsive.min.css" order="2"}
   {get_combined_css}
 
   {foreach from=$themes item=theme}
@@ -56,9 +56,9 @@
   {/if}
 
   {get_combined_scripts load='header'}
-  {combine_script id='jquery' path='themes/simpleng/js/jquery-1.9.1.min.js'}
-  {combine_script id='bootstrap' require='jquery' path='themes/simpleng/js/bootstrap.min.js'}
-  {combine_script id='simpleng.scripts' require='jquery' path='themes/simpleng/js/scripts.js'}
+  {combine_script id='jquery' path="themes/{$themeconf.theme_dir}/js/jquery-1.9.1.min.js"}
+  {combine_script id='bootstrap' require='jquery' path="themes/{$themeconf.theme_dir}/js/bootstrap.min.js"}
+  {combine_script id='simpleng.scripts' require='jquery' path="themes/{$themeconf.theme_dir}/js/scripts.js"}
 
   {if not empty($head_elements)}
     {foreach from=$head_elements item=elt}{$elt}

@@ -19,5 +19,5 @@ js:
 
 archive:
 	sed -i "s/Version: .*/Version: $(VERSION)/" themeconf.inc.php
-	git archive --format=zip --prefix=simpleng/ HEAD > ../simpleng-$(VERSION).zip
-	@echo "zip archive available: ../simpleng-$(VERSION).zip"
+	git archive --format=zip --prefix=simpleng_light/ HEAD > ../simpleng-light-$(VERSION).zip
+	@echo "zip archive available: ../simpleng-light-$(VERSION).zip"

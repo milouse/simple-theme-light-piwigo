@@ -6,17 +6,17 @@
       <li><a href="{$U_SLIDESHOW_STOP}" title="{'stop the slideshow'|@translate}"><i class="icon-white icon-stop"></i></a></li>
     {/if}
     {if isset($slideshow.U_START_PLAY)}
-      <li><a href="{$slideshow.U_START_PLAY}" title="{'Play of slideshow'|@translate}"><i class="icon-play icon-white"></i></a></li>
+      <li><a href="{$slideshow.U_START_PLAY}" title="{'Play of slideshow'|@translate}"><i class="icon-play"></i></a></li>
     {/if}
     {if isset($slideshow)}
       {if isset($slideshow.U_STOP_PLAY)}
-        <li><a href="{$slideshow.U_STOP_PLAY}" title="{'Pause of slideshow'|@translate}"><i class="icon-pause icon-white"></i></a></li>
+        <li><a href="{$slideshow.U_STOP_PLAY}" title="{'Pause of slideshow'|@translate}"><i class="icon-pause"></i></a></li>
       {/if}
       {if isset($slideshow.U_DEC_PERIOD)}
-        <li><a href="{$slideshow.U_DEC_PERIOD}" title="{'Accelerate diaporama speed'|@translate}"><i class="icon-plus icon-white"></i></a></li>
+        <li><a href="{$slideshow.U_DEC_PERIOD}" title="{'Accelerate diaporama speed'|@translate}"><i class="icon-plus"></i></a></li>
       {/if}
       {if isset($slideshow.U_INC_PERIOD)}
-        <li><a href="{$slideshow.U_INC_PERIOD}" title="{'Reduce diaporama speed'|@translate}"><i class="icon-minus icon-white"></i></a></li>
+        <li><a href="{$slideshow.U_INC_PERIOD}" title="{'Reduce diaporama speed'|@translate}"><i class="icon-minus"></i></a></li>
       {/if}
     {/if}
     {/if}

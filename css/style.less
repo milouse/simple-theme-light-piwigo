@@ -10,20 +10,26 @@
 // Variables
 // -------------------------
 
-@textColor:      #eee;
-@headingsColor:  #eee;
-@linkColor:      #eee;
-@linkColorHover: #fff;
-@secondaryColor: #888;
-@bodyBackground: #303030;
-@blue:           #08c;
+@blue:           #0088cc;
+@red:            #e04040;
+@white:          #ffffff;
+@black:          #000000;
+@lightblack:     #303030;
+@lightgray:      #999999;
 
-@dropdownBackground:           #2c2c2c;
-@dropdownDividerTop:           #333;
-@dropdownDividerBottom:        #333;
-@dropdownLinkColor:            #999;
-@dropdownLinkColorHover:       @white;
-@dropdownLinkColorActive:      @white;
+@textColor:      @lightblack;
+@headingsColor:  @lightblack;
+@linkColor:      @lightblack;
+@linkColorHover: @black;
+@secondaryColor: @lightgray;
+@bodyBackground: #eee;
+
+@dropdownBackground:           @white;
+@dropdownDividerTop:           @lightgray;
+@dropdownDividerBottom:        @lightgray;
+@dropdownLinkColor:            @lightblack;
+@dropdownLinkColorHover:       #2c2c2c;
+@dropdownLinkColorActive:      #2c2c2c;
 @dropdownLinkBackgroundActive: @secondaryColor;
 @dropdownLinkBackgroundHover:  @dropdownLinkBackgroundActive;
 
@@ -39,13 +45,11 @@ figure { margin: 0; }
 a {
   &:hover {
     text-decoration: none;
-    text-shadow: 0 0 6px #999;
+    text-shadow: 0 0 6px @lightgray;
   }
 }
 
 h1, h2, h3, h4 {
-  text-shadow: 1px 1px 3px #000000;
-
   a {color: @headingsColor;}
 }
 
@@ -160,7 +164,7 @@ input, textarea, select {
   display: inline-block;
   margin-left: 1em;
 }
-.mandatorystar { color: #e04040; }
+.mandatorystar { color: @red; }
 
 // Menubar
 // -------------------------
@@ -177,8 +181,7 @@ input, textarea, select {
 // -------------------------
 
 .thumbnail {
-  border: 0;
-  border-radius: 0;
+  border: 1px solid @lightblack;
   padding: 0;
   overflow: hidden;
 
@@ -280,7 +283,7 @@ input, textarea, select {
     margin: 0;
   }
   input.rateButtonStarFull, input.rateButtonStarEmpty {
-    background-image: url("../img/glyphicons-halflings-white.png");
+    background-image: url("../img/glyphicons-halflings.png");
     background-position: 14px 14px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -449,19 +452,26 @@ input, textarea, select {
 @media (max-width: 980px) {
   .picture_nav {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-      bottom: 0;
-      padding: 0;
-      position: fixed;
-      width: 100%;
-      margin-left: -20px;
-      z-index: 100;
+    bottom: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    margin-left: -20px;
+    z-index: 100;
 
-    .imgNext, .imgPrev {
-    }
+    .imgNext, .imgPrev {}
     .imgNext {right: 25%;}
     .imgPrev {left: 25%;}
   }
   .titrePage ul .imageNumber {font-size: 20px;}
+
+  /* Quick fix for the broken menu in mobile */
+  .dropdown-backdrop {
+    pointer-events: none;
+  }
+  .nav-collapse.in.collapse {
+    height: auto!important;
+  }
 }
 
 // Desktop

@@ -41,20 +41,20 @@ jQuery().ready(function() {
 <header class="titrePage">
   <ul class="headerActions">
     {if isset($U_SLIDESHOW_START)}
-    <li><a href="{$U_SLIDESHOW_START}" title="{'slideshow'|@translate}" rel="nofollow"><i class="icon-play icon-white"></i></a></li>
+    <li><a href="{$U_SLIDESHOW_START}" title="{'slideshow'|@translate}" rel="nofollow"><i class="icon-play"></i></a></li>
     {/if}
     {if isset($current.U_DOWNLOAD)}
-    <li><a id="downloadSwitchLink" href="{$current.U_DOWNLOAD}" title="{'Download this file'|@translate}"><i class="icon-download icon-white"></i></a></li>
+    <li><a id="downloadSwitchLink" href="{$current.U_DOWNLOAD}" title="{'Download this file'|@translate}"><i class="icon-download"></i></a></li>
     {/if}
     {if isset($PLUGIN_PICTURE_ACTIONS)}{$PLUGIN_PICTURE_ACTIONS}{/if}
     {if isset($favorite)}
-    <li><a href="{$favorite.U_FAVORITE}">{if $favorite.IS_FAVORITE}<i class="icon-star icon-white"></i>{else}<i class="icon-star-empty icon-white"></i>{/if}</a></li>
+    <li><a href="{$favorite.U_FAVORITE}">{if $favorite.IS_FAVORITE}<i class="icon-star"></i>{else}<i class="icon-star-empty"></i>{/if}</a></li>
     {/if}
     {if !empty($U_SET_AS_REPRESENTATIVE)}
-    <li><a href="{$U_SET_AS_REPRESENTATIVE}" title="{'set as album representative'|@translate}"><i class="icon-picture icon-white"></i></a></li>
+    <li><a href="{$U_SET_AS_REPRESENTATIVE}" title="{'set as album representative'|@translate}"><i class="icon-picture"></i></a></li>
     {/if}
     {if isset($U_PHOTO_ADMIN)}
-    <li><a href="{$U_PHOTO_ADMIN}"><i class="icon-edit icon-white"></i></a></li>
+    <li><a href="{$U_PHOTO_ADMIN}"><i class="icon-edit"></i></a></li>
     {/if}
     <li class="imageNumber">{$PHOTO}</li>
   </ul>
@@ -119,11 +119,11 @@ jQuery().ready(function() {
 
 <ul class="nav nav-pills tabs">
   {if (isset($COMMENT_COUNT) and ($COMMENT_COUNT>0)) or isset($comment_add) }
-  <li><a href="#theComments" title="{'Add a comment'|@translate}" data-toggle="tab"><i class="icon-comment icon-white"></i> {$pwg->l10n_dec('%d comment', '%d comments',$COMMENT_COUNT)}</a></li>
+  <li><a href="#theComments" title="{'Add a comment'|@translate}" data-toggle="tab"><i class="icon-comment"></i> {$pwg->l10n_dec('%d comment', '%d comments',$COMMENT_COUNT)}</a></li>
   {/if}
-  <li><a href="#imageInfos" data-toggle="tab"><i class="icon-file icon-white"></i> Informations</a></li>
+  <li><a href="#imageInfos" data-toggle="tab"><i class="icon-file"></i> Informations</a></li>
   {if isset($metadata)}
-  <li><a href="#imageMeta" data-toggle="tab"><i class="icon-camera icon-white"></i> EXIF</a></li>
+  <li><a href="#imageMeta" data-toggle="tab"><i class="icon-camera"></i> EXIF</a></li>
   {/if}
 </ul>
 
