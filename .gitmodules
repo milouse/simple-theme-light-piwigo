@@ -1,3 +1,6 @@
 [submodule "bootstrap"]
 	path = bootstrap
 	url = https://github.com/twitter/bootstrap.git
+[submodule "css/open-sans"]
+	path = css/open-sans
+	url = https://github.com/FontFaceKit/open-sans.git
