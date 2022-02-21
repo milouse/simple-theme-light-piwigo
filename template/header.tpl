@@ -73,8 +73,6 @@
 {if isset($MENUBAR)}{$MENUBAR}{/if}
 
 <div id="the_page" class="container">
-  <h1 id="gallery_title"><a href="{$U_HOME}">{$GALLERY_TITLE}</a></h1>
-
   {if not empty($header_msgs)}
   <div class="header_msgs">
     {foreach from=$header_msgs item=elt}
