@@ -1,20 +1,19 @@
+RECESS = ./node_modules/.bin/recess
+UGLIFYJS = ./node_modules/.bin/uglifyjs
+
+
 .PHONY: archive css js
 
 all: css js
 
 css:
 	@echo "Build css with boostrap and recess"
-	recess --compress css/style.less > css/style.min.css
-	recess --compress bootstrap/less/responsive.less > css/bootstrap-responsive.min.css
-
-# Watch less files
-watch:
-	@echo "Watching less files..."
-	recess css/style.less:css/style.min.css --watch .
+	$(RECESS) --compress css/style.less > css/style.min.css
+	$(RECESS) --compress bootstrap/less/responsive.less > css/bootstrap-responsive.min.css
 
 js:
 	cat bootstrap/js/{bootstrap-transition.js,bootstrap-tooltip.js,bootstrap-tab.js,bootstrap-collapse.js,bootstrap-dropdown.js} > js/bootstrap.js
-	uglifyjs js/bootstrap.js -nc > js/bootstrap.min.js
+	$(UGLIFYJS) js/bootstrap.js --compress --output js/bootstrap.min.js
 	rm js/bootstrap.js
 
 
