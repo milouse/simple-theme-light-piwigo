@@ -1,4 +1,4 @@
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">{'Identification'|@translate}</a>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">{if isset($USERNAME)}{$USERNAME}{else}{'Identification'|@translate}{/if}</a>
 <ul class="dropdown-menu">
   {if isset($U_REGISTER)}
   <li><a href="{$U_REGISTER}" title="{'Create a new account'|@translate}" rel="nofollow">{'Register'|@translate}</a></li>
